@@ -2,7 +2,7 @@ name: Daily Commit
 
 on:
   schedule:
-    - cron: '15 4 * * *'  # Runs every day at 04:15 UTC (~09:45 IST)
+    - cron: '15 4 * * *'  # Daily at 4:15 UTC (~9:45 AM IST)
   workflow_dispatch:
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # ✅ allows push access
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit step - 23f2001456@ds.study.iitm.ac.in
         run: |
